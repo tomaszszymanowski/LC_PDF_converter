@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog, Menu
+import extraxt_from_pdf
 
 class FileChooserApp:
     def __init__(self, root):
@@ -33,6 +34,7 @@ class FileChooserApp:
         )
         if self.selected_file:
             print(f"Selected file: {self.selected_file}")
+            extraxt_from_pdf.extraxt_data(self.selected_file)
 
     def save_file(self):
         self.saved_file = filedialog.asksaveasfilename(
